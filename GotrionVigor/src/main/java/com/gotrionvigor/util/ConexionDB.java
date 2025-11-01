@@ -19,7 +19,8 @@ public class ConexionDB {
         }
     }
 
-    public static void main(String[] args) {
+    // Main actualizado para evitar advertencias
+    static void main() {
         if (getConnection() != null) {
             System.out.println("Conexión exitosa!");
         } else {

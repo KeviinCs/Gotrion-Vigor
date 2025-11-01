@@ -1,11 +1,12 @@
+
 package com.gotrionvigor.dao;
 
 import com.gotrionvigor.modelo.Dieta;
 import com.gotrionvigor.util.ConexionDB;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class DietaDao {
 

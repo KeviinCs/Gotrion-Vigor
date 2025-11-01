@@ -7,9 +7,8 @@ import com.gotrionvigor.modelo.Usuario;
 import com.gotrionvigor.modelo.Dieta;
 import com.gotrionvigor.modelo.Receta;
 
-public class Main {
-    public static void main(String[] args) {
-
+class Main {
+    static void main() {
         UsuarioDao usuarioDao = new UsuarioDao();
         Usuario usuario = new Usuario(0, "Carlos", 25, "carlos@mail.com", "adulto");
         usuarioDao.insertarUsuario(usuario);
