@@ -1,0 +1,9 @@
+com\gotrionvigor\dao\RecetaDao.class
+com\gotrionvigor\modelo\Usuario.class
+com\gotrionvigor\vista\Main.class
+com\gotrionvigor\modelo\Receta.class
+com\gotrionvigor\util\ConexionDB.class
+com\gotrionvigor\dao\DietaDao.class
+com\gotrionvigor\dao\UsuarioDao.class
+com\gotrionvigor\servlet\RecetaServlet.class
+com\gotrionvigor\modelo\Dieta.class

@@ -85,4 +85,56 @@ public class RecetaDao {
             System.out.println("Error al eliminar receta: " + e.getMessage());
         }
     }
+    public Receta obtenerRecetaPorId(int id) {
+        String sql = "SELECT * FROM receta WHERE id = ?";
+        Receta receta = null;
+
+        try (Connection con = ConexionDB.getConnection();
+             PreparedStatement ps = con.prepareStatement(sql)) {
+
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                receta = new Receta(
+                        rs.getInt("id"),
+                        rs.getString("nombre"),
+                        rs.getString("ingredientes"),
+                        rs.getString("instrucciones")
+                );
+            }
+
+        } catch (SQLException e) {
+            System.out.println("Error al obtener receta por ID: " + e.getMessage());
+        }
+
+        return receta;
+    }
+    // ➤ Obtener receta por ID
+    public Receta obtenerPorId(int id) {
+        String sql = "SELECT * FROM receta WHERE id = ?";
+        Receta receta = null;
+
+        try (Connection con = ConexionDB.getConnection();
+             PreparedStatement ps = con.prepareStatement(sql)) {
+
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                receta = new Receta(
+                        rs.getInt("id"),
+                        rs.getString("nombre"),
+                        rs.getString("ingredientes"),
+                        rs.getString("instrucciones")
+                );
+            }
+
+        } catch (SQLException e) {
+            System.out.println("Error al obtener receta por ID: " + e.getMessage());
+        }
+
+        return receta;
+    }
+
 }
